@@ -1,0 +1,12 @@
+%h1
+    Schedule
+%p
+    = @schedule.valid_meeting_schedule? ? "Valid Schedule" : "Invalid Schedule"
+- @schedule.meetings.each do |meeting|
+    %p
+        = "Name: #{meeting.name}"
+    %p
+        = "Duration: #{meeting.duration}"
+    %p
+        = "Type: #{meeting.type}"
+    
